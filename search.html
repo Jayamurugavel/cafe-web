@@ -1,0 +1,45 @@
+<input type="text" onkeyup="check(event)">
+
+<div>
+    <h1>one</h1>
+    <h1>two</h1>
+    <h1>three</h1>
+    <h1>four</h1>
+    <h1>five</h1>
+    <h1>six</h1>
+    <h1>seven</h1>
+</div>
+
+<script>
+
+    var entertext=""
+    //select the container atha vu thu div
+    var container=document.querySelector("div")
+    //container kulla irukara thu vanthu h1 
+    var elements=container.querySelectorAll("h1")
+
+    console.log(elements)
+
+    function check(event)
+    {
+         entertext=event.target.value.toUpperCase()
+
+         for(var i=0;i<elements.length;i++)
+         {
+            if(elements[i].textContent.toUpperCase().indexOf(entertext)<0)
+            {
+               elements[i].style.display="none"
+            }
+            else
+            {
+                elements[i].style.display-"block"
+            }
+
+         }
+
+
+
+        
+         
+    }
+</script>
